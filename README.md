@@ -21,7 +21,7 @@ Las dos funcionalidades principales son:
 ### Creación del grafo
 La generación de un grafo único a partir de todas las rutas leídas es el pilar fundamental de este proyecto ya que, permite unir las rutas y hace posible la búsqueda de caminos. Gracias a varias estrategias, el programa consigue unificar las diferentes rutas que el usuario carga, pasando de tener un grafo superpoblado de nodos con la mayoria de ellos sin sentido y sin ningun tipo de conexión entre rutas, a un grafo con los nodos necesarios para la representación de todas las rutas, sin nodos ni aristas repetidas y con todas las rutas unidas entre si, en caso de que interseccionen.
 
-<img src="https://github.com/adriagomeez/TFG-GPSdeMontana/blob/main/imgs/grafo%20no%20creado.PNG" width="380"><img src="https://github.com/adriagomeez/TFG-GPSdeMontana/blob/main/imgs/grafo%20creado.PNG" width="415">
+<img src="https://github.com/adriagomeez/TFG-GPSdeMontana/blob/main/imgs/grafo%20no%20creado.PNG" width="390"><img src="https://github.com/adriagomeez/TFG-GPSdeMontana/blob/main/imgs/grafo%20creado.PNG" width="415">
 
 El algoritmo creado es capaz de convertir el grafo sin filtrar mostrado en la imagen izquierda a el grafo de la imagen derecha. Visto con mayor detalle la conversion realizada es la siguiente:
 
