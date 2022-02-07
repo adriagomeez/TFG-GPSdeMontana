@@ -41,9 +41,9 @@ En cambio si el usuario selecciona una distancia, un desnivel o ambas cosas que 
 En la que el usuario ha seleccionado una distancia de 28.5km y un desnivel acumulado de 2310m. El algoritmo ha conseguido devolver una ruta con 28.504km de distancia y un desnivel acumulado de 2557.8m. Lo que indica que el algoritmo es capaz de ofrecer buenos resultados.
 
 ## Instalador
-En el repositorio se encuantra el instalador de la aplicación, por lo que si se desea utilizarla, únicamente tiene que desgargarlo y ejecutarlo.
+En el repositorio se encuantra el instalador de la aplicación, por lo que si se desea utilizarla, únicamente ha de descargarse y ejecutar.
 
-
+# 
 Para más información del proyecto, con un mayor detalle en la explicación de todas sus funcionalidades, leer el archivo TFG-GPSdeMontaña.pdf que se encuentra en el repositorio.
 
 TFG curso 2021/22 - Desarrollado por Adrià Gómez Acosta
