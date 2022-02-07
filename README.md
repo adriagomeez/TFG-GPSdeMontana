@@ -25,7 +25,7 @@ La generación de un grafo único a partir de todas las rutas leídas es el pila
 
 El algoritmo creado es capaz de convertir el grafo sin filtrar mostrado en la imagen izquierda a el grafo de la imagen derecha. Visto con mayor detalle la conversion realizada es la siguiente:
 
-<img src="https://github.com/adriagomeez/TFG-GPSdeMontana/blob/main/imgs/sin%20filtrar%20ampliado.PNG" width="500"><img src="https://github.com/adriagomeez/TFG-GPSdeMontana/blob/main/imgs/filtrado%20ampliado.PNG" width="500">
+<img src="https://github.com/adriagomeez/TFG-GPSdeMontana/blob/main/imgs/sin%20filtrar%20ampliado.PNG" width="400"><img src="https://github.com/adriagomeez/TFG-GPSdeMontana/blob/main/imgs/filtrado%20ampliado.PNG" width="400">
 
 ### Busqueda de la ruta
 Con un origen y un final de la ruta seleccionados y con todos los parámetros y paradas intermedias que el usuario desee, el programa es capaz de encontrar una ruta que se adapte lo máximo posible a las necesidades del usuario, y en un tiempo de búsqueda razonable. Para ello, se han utilizado algoritmos de Dijkstra, Greedy y Backtracking.
