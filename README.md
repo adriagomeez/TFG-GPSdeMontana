@@ -1,4 +1,6 @@
 # TFG-GPSdeMontana
+![alt text](https://github.com/adriagomeez/TFG-GPSdeMontana/blob/main/imgs/Captura3.PNG)
+
 La popularidad y la utilización de los GPS ha crecido radicalmente en los últimos años en muchos ámbitos de la
 vida humana. Uno de ellos es la realización de rutas por la montaña para poder llevar a cabo actividades como rutas en
 bicicleta, salir a correr o caminatas por la montaña. Para satisfacer esa necesidad, han surgido varias aplicaciones que
