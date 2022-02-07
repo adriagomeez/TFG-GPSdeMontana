@@ -1,4 +1,4 @@
-# TFG - GPS de Montana
+# <img src="https://github.com/adriagomeez/TFG-GPSdeMontana/blob/main/imgs/icono.png" width="48"> TFG - GPS de Montana 
 
 La popularidad y la utilización de los GPS ha crecido radicalmente en los últimos años en muchos ámbitos de la
 vida humana. Uno de ellos es la realización de rutas por la montaña para poder llevar a cabo actividades como rutas en
