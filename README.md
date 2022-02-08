@@ -1,49 +1,49 @@
-# <img src="https://github.com/adriagomeez/TFG-GPSdeMontana/blob/main/imgs/icono.png" width="35"> TFG - GPS de Montana 
+# <img src="https://github.com/adriagomeez/TFG-GPSdeMontana/blob/main/imgs/icono.png" width="35"> TFG - Mountain GPS 
 
-La popularidad y la utilización de los GPS ha crecido radicalmente en los últimos años en muchos ámbitos de la
-vida humana. Uno de ellos es la realización de rutas por la montaña para poder llevar a cabo actividades como rutas en
-bicicleta, salir a correr o caminatas por la montaña. Para satisfacer esa necesidad, han surgido varias aplicaciones que
-permiten el manejo de estas rutas pudiendo visualizarlas y compartirlas para poder realizar las actividades deseadas. En este
-proyecto, se desarrolla una aplicación de escritorio multiplataforma capaz de unificar varias rutas cargadas por el usuario en un
-único grafo sin nodos ni aristas repetidas ni redundantes, para posteriormente, con un algoritmo de búsqueda, poder generar
-rutas entre dos puntos seleccionados, con restricciones de distancia y desnivel acumulado y con la posibilidad de añadir
-paradas intermedias en ella, con la mejor relación entre velocidad de respuesta y precisión de los resultados posible. Además,
-es posible guardar esta ruta para poder introducirla en GPSs de montaña y poder realizarla sin problema, teniendo así
-un generador de rutas el cual ofrece una infinidad de ellas gracias a todos sus parámetros seleccionables.
+The popularity and use of GPS has grown dramatically in recent years in many areas of human life. One of them is
+the realisation of mountain routes to be able to carry out activities such as cycling routes, jogging or hiking in the mountains. In
+order to satisfy this need, several applications have emerged that allow the management of these routes, visualising and
+sharing them in order to be able to carry out the desired activities. In this project, a multiplatform desktop application is
+developed that is capable of unifying several routes loaded by the user in a single graph without repeated or redundant nodes
+or edges, in order to subsequently, with a search algorithm, be able to generate routes between two selected points, with
+restrictions on distance and accumulated slope and with the possibility of adding intermediate stops in it, with the best possible
+relationship between speed of response and accuracy of the results. In addition, it is possible to save this route to be able to
+introduce it in mountain GPS and to be able to carry it out without any problem, thus having a route generator which offers an
+infinity of them thanks to all its selectable parameters.
 
 ![alt text](https://github.com/adriagomeez/TFG-GPSdeMontana/blob/main/imgs/Captura3.PNG)
 
-## Funcionalidades
-La aplicación permite al usuario cargar una imagen en formato GeoTiff que será mostrada por pantalla y sobre la cual se puede desplazar con total libertad aplicando zum y arrastrando sobre ella. También permite cargar rutas en formato GPX las cuales son leidas y unificadas en un grafo que se muestra por pantalla. Este grafo puede ser guardado en un fichero GPX si el usuario lo desea. Sobre el grafo se pueden seleccionar puntos de origen, fin y puntos intermedios con los que poder generar una ruta. Además, también se permite seleccionar una distancia y un desnivel acumulado a los que la ruta que se genere se debe acercar. El usuario puede iniciar la busqueda de la ruta la cual devolverá la mejor ruta encontrada en como máximo 30 segundos. Finalmete esta ruta se puede guardar en un fichero GPX el cual es leido perfectamente por otros dispositivos para poder realizarla.
+## Funcionalities
+The application allows the user to load an image in GeoTiff format that will be displayed on the screen and on which the user can move freely by applying zoom and dragging on it. It also allows the user to load routes in GPX format which are read and unified in a graph that is displayed on the screen. This graph can be saved in a GPX file if the user wishes. On the graph, it is possible to select start, end and intermediate points to generate a route. In addition, it is also possible to select a distance and acumulative elevation gain to which the generated route should approach. The user can start a route search, which will return the best route found within a maximum of 30 seconds. Finally, this route can be saved in a GPX file which can be read perfectly by other devices in order to be able to follow it.
 
-Las dos funcionalidades principales son:
+The two main functionalities are:
 
-### Creación del grafo
-La generación de un grafo único a partir de todas las rutas leídas es el pilar fundamental de este proyecto ya que, permite unir las rutas y hace posible la búsqueda de caminos. Gracias a varias estrategias, el programa consigue unificar las diferentes rutas que el usuario carga, pasando de tener un grafo superpoblado de nodos con la mayoria de ellos sin sentido y sin ningun tipo de conexión entre rutas, a un grafo con los nodos necesarios para la representación de todas las rutas, sin nodos ni aristas repetidas y con todas las rutas unidas entre si, en caso de que interseccionen.
+### Graph creation
+The generation of a single graph from all the routes read is the fundamental pillar of this project, as it allows the routes to be joined and makes it possible to search for paths. Thanks to various strategies, the programme manages to unify the different routes that the user loads, going from having an overpopulated graph with most of them meaningless and without any type of connection between routes, to a graph with the necessary nodes for the representation of all the routes, without repeated nodes or edges and with all the routes joined together, in the event that they intersect.
 
 <img src="https://github.com/adriagomeez/TFG-GPSdeMontana/blob/main/imgs/grafo%20no%20creado.PNG" width="390"><img src="https://github.com/adriagomeez/TFG-GPSdeMontana/blob/main/imgs/grafo%20creado.PNG" width="419">
 
-El algoritmo creado es capaz de convertir el grafo sin filtrar mostrado en la imagen izquierda a el grafo de la imagen derecha. Visto con mayor detalle la conversion realizada es la siguiente:
+The algorithm created is able to convert the unfiltered graph shown in the left image to the graph in the right image. Seen in more detail, the conversion is as follows:
 
 <img src="https://github.com/adriagomeez/TFG-GPSdeMontana/blob/main/imgs/sin%20filtrar%20ampliado.PNG" width="400"><img src="https://github.com/adriagomeez/TFG-GPSdeMontana/blob/main/imgs/filtrado%20ampliado.PNG" width="400">
 
-### Busqueda de la ruta
-Con un origen y un final de la ruta seleccionados y con todos los parámetros y paradas intermedias que el usuario desee, el programa es capaz de encontrar una ruta que se adapte lo máximo posible a las necesidades del usuario, y en un tiempo de búsqueda razonable. Para ello, se han utilizado algoritmos de Dijkstra, Greedy y Backtracking.
+### Path search
+With an origin and an end of the route selected and with as many parameters and intermediate stops as the user wants, the programme is able to find a route that suits the user's needs as much as possible, and in a reasonable search time. For this purpose, Dijkstra, Greedy and Backtracking algorithms have been used.
 
-Los algoritmos de Dijkstra y Greedy se ejecutan siempre, pero su solución será el resulatado final únicamente si el usuario decide no seleccionar ninguna distancia ni desnivel que debe tener la ruta. Con ello, el programa es capaz de generar rutas que pasan por todos los puntos, la cual, intentará ser aquella con una menor dificultad en cuanto a distancia y desnivel. Como por ejemplo la siguiente ruta encontrada:
+The Dijkstra and Greedy algorithms are always executed, but their solution will be the final result only if the user decides not to select any distance or gradient that the route should have. With this, the program is able to generate routes that pass through all points, which will try to be the one with the least difficulty in terms of distance and gradient. As for example the following route found:
 
 <img src=https://github.com/adriagomeez/TFG-GPSdeMontana/blob/main/imgs/ruta%20simple.PNG width="1000">
 
-En cambio si el usuario selecciona una distancia, un desnivel o ambas cosas que debe tener la ruta, el algoritmo utilizado es Backtracking que con la ayuda de Dijkstra, Greedy y diferentes heuristicas, es capaz de crear rutas como esta:
+On the other hand, if the user selects a distance, a slope or both that the route must have, the algorithm used is Backtracking which, with the help of Dijkstra, Greedy and different heuristics, is able to create routes like this one:
 
 <img src=https://github.com/adriagomeez/TFG-GPSdeMontana/blob/main/imgs/ruta%20compleja.PNG width="1000">
 
-En la que el usuario ha seleccionado una distancia de 28.5km y un desnivel acumulado de 2310m. El algoritmo ha conseguido devolver una ruta con 28.504km de distancia y un desnivel acumulado de 2557.8m. Lo que indica que el algoritmo es capaz de ofrecer buenos resultados.
+In which the user has selected a distance of 28.5km and a gradient of 2310m. The algorithm has managed to return a route with a distance of 28.504km and a gradient of 2557.8m. This indicates that the algorithm is capable of delivering good results.
 
-## Instalador
-En el repositorio se encuantra el instalador de la aplicación, por lo que si se desea utilizarla, únicamente ha de descargarse y ejecutar.
+## Installer
+The repository contains the installer of the application, so if you want to use it, just download it and run it.
 
 # 
-Para más información del proyecto, con un mayor detalle en la explicación de todas sus funcionalidades, leer el archivo TFG-GPSdeMontaña.pdf que se encuentra en el repositorio.
+For more information of the project, with a more detailed explanation of all its functionalities, read the file TFG-GPSdeMontaña.pdf in the repository.
 
-TFG curso 2021/22 - Desarrollado por Adrià Gómez Acosta
+TFG - UAB course 2021/22 - Developed by Adrià Gómez Acosta
