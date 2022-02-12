@@ -21,11 +21,11 @@ The two main functionalities are:
 ### Graph creation
 The generation of a single graph from all the routes read is the fundamental pillar of this project, as it allows the routes to be joined and makes it possible to search for paths. Thanks to various strategies, the programme manages to unify the different routes that the user loads, going from having an overpopulated graph with most of them meaningless and without any type of connection between routes, to a graph with the necessary nodes for the representation of all the routes, without repeated nodes or edges and with all the routes joined together, in the event that they intersect.
 
-<img src="https://github.com/adriagomeez/TFG-GPSdeMontana/blob/main/imgs/grafo%20no%20creado.PNG" width="390"><img src="https://github.com/adriagomeez/TFG-GPSdeMontana/blob/main/imgs/grafo%20creado.PNG" width="419">
+<img src="https://github.com/adriagomeez/TFG-GPSdeMontana/blob/main/imgs/grafo%20no%20creado.PNG" width="390"> <img src="https://github.com/adriagomeez/TFG-GPSdeMontana/blob/main/imgs/grafo%20creado.PNG" width="419">
 
 The algorithm created is able to convert the unfiltered graph shown in the left image to the graph in the right image. Seen in more detail, the conversion is as follows:
 
-<img src="https://github.com/adriagomeez/TFG-GPSdeMontana/blob/main/imgs/sin%20filtrar%20ampliado.PNG" width="400"><img src="https://github.com/adriagomeez/TFG-GPSdeMontana/blob/main/imgs/filtrado%20ampliado.PNG" width="400">
+<img src="https://github.com/adriagomeez/TFG-GPSdeMontana/blob/main/imgs/sin%20filtrar%20ampliado.PNG" width="400"> <img src="https://github.com/adriagomeez/TFG-GPSdeMontana/blob/main/imgs/filtrado%20ampliado.PNG" width="400">
 
 ### Path search
 With an origin and an end of the route selected and with as many parameters and intermediate stops as the user wants, the programme is able to find a route that suits the user's needs as much as possible, and in a reasonable search time. For this purpose, Dijkstra, Greedy and Backtracking algorithms have been used.
