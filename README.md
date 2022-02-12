@@ -40,9 +40,6 @@ On the other hand, if the user selects a distance, a slope or both that the rout
 
 In which the user has selected a distance of 28.5km and a gradient of 2310m. The algorithm has managed to return a route with a distance of 28.504km and a gradient of 2557.8m. This indicates that the algorithm is capable of delivering good results.
 
-## Installer
-The repository contains the installer of the application, so if you want to use it, just download it and run it.
-
 # 
 For more information of the project, with a more detailed explanation of all its functionalities, read the file TFG-GPSdeMontaña.pdf in the repository.
 
